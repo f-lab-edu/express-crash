@@ -15,13 +15,16 @@ let posts = [
 ];
 //Get all posts
 app.get("/api/posts", (req, res) => {
+  console.log(req.query);
   res.json(posts);
 });
 
 //Get single post
 app.get("/api/posts/:id", (req, res) => {
-  console.log(req.params);
-  res.json(posts);
+  const id = parseInt(req.params.id); //문자열 ->숫자로 //parseInt 오타 주의
+  res.json(posts.filter((p) => p.id === id)); //위에 posts 객체의 id가 여기 전달된 id와 같은지 유무 확인
+  //   console.log(req.params.id);
+  //   res.json(posts);
 });
 
 //서버실행

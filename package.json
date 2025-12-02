@@ -3,6 +3,7 @@
   "version": "1.0.0",
   "description": "이 프로젝트는 기본 서버 설정, 요청 및 응답 처리, 미들웨어 구현에 대해 다룹니다.",
   "main": "index.js",
+  "type": "module",
   "scripts": {
     "start": "node server",
     "dev": "node --watch --env-file=.env server.js"

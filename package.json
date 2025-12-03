@@ -5,13 +5,15 @@
   "main": "index.js",
   "type": "module",
   "scripts": {
-    "start": "node server",
+    "start": "node server.js",
     "dev": "node --watch --env-file=.env server.js"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "color": "^5.0.3",
+    "colors": "^1.4.0",
     "express": "^5.2.1"
   }
 }

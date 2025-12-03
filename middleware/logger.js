@@ -1,4 +1,4 @@
-import color from "colors";
+import colors from "colors";
 
 const methodColors = {
   GET: "green",
@@ -12,7 +12,10 @@ const logger = (req, res, next) => {
   const color = methodColors[req.method] || "white";
   // next는 마지막에 호출 후 다음 미들웨어/라우트로 흐름 보냄
   console.log(
-    `${req.method} ${req.protocol}://${req.get("host")}${req.originalUrl}`
+    colors[color](
+      //이부분 고침
+      `${req.method} ${req.protocol}://${req.get("host")}${req.originalUrl}`
+    )
   );
   next();
 };
